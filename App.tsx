@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import {Button, PaperProvider} from "react-native-paper";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <PaperProvider>
+        <View style={styles.container}>
+          <Text>Olá, mundo!</Text>
+            <Button mode='outlined' icon='camera' buttonColor='red' textColor='white'>Clique aqui</Button>
+          <StatusBar style="auto" />
+        </View>
+      </PaperProvider>
   );
 }
 
